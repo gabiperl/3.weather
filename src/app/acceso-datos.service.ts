@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -13,6 +14,17 @@ export class AccesoDatosService {
 // &
 // units=metric
 
+private urlBase= 'https://api.openweathermap.org/data/2.5/'
+private urlSufix = '&appid=d657bd8acf08269b0e7beb0c1f6cf5f3&units=metric'
 
-  constructor() { }
+
+  constructor(private htttp:HttpClient) { }
+
+
+  searchByName(pattern:string) {
+    //http.get genera un observable (un locker de Eimason)
+    return this.htttp.get(this.urlBase + "find?q=" + pattern + this.urlSufix)
+
+}
+
 }
