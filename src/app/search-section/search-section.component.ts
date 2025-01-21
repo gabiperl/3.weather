@@ -6,8 +6,7 @@ import { CitiesService } from '../cities.service';
   selector: 'app-search-section',
   imports: [],
   templateUrl: './search-section.component.html',
-  styles: `
-  `
+  styles: ` `
 })
 export class SearchSectionComponent {
 
@@ -33,5 +32,9 @@ export class SearchSectionComponent {
 
   getResults() {
     return this.results
+  }
+
+  isAlreadyInCities(aCity:any) {
+    return this.citiesService.isAlreadyInMyCities(aCity)
   }
 }

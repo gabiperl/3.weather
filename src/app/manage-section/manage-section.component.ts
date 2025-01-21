@@ -10,10 +10,10 @@ import { CitiesService } from '../cities.service';
 })
 export class ManageSectionComponent {
 
-  constructor(private citiesServies:CitiesService) { }
+  constructor(private citiesServices:CitiesService) { }
   
   getCities() {
-    return this.citiesServies.getCities()
+    return this.citiesServices.getCities()
   }
 
 }
