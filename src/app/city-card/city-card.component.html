@@ -2,7 +2,7 @@
     <div class="card-body">
         <h5 class="card-title"> {{city.name}} </h5>
             <p class="card-text"> {{city.sys.country | countryCode}} </p>
-            <p class="card-text">  {{city.main.temp | temp:2}} </p>
+            <p class="card-text">  {{city.main.temp | temp:3}} </p>
         <p>
         <button (click)="removeCity()" type="button" class="btn btn-outline-secondary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">

@@ -44,6 +44,12 @@ export class CitiesService {
   isAlreadyInCities(aCity:any) {
     return this.cities.find(c => c.id == aCity.id);
   }
+
+  updateCity(updatedCity:any) {
+    let position = this.cities.findIndex(c => c.id == updatedCity.id)
+    this.cities[position] = updatedCity;
+
+  }
   
   saveAll() {
     localStorage.setItem('cities', JSON.stringify(this.cities))

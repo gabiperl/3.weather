@@ -20,6 +20,14 @@ private urlSufix = '&appid=d657bd8acf08269b0e7beb0c1f6cf5f3&units=metric'
 
   constructor(private htttp:HttpClient) { }
 
+  // updateAllMyCities() {
+
+  // }
+  
+  updateById(id:number) {
+    return this.htttp.get(this.urlBase + "weather?id=" + id + this.urlSufix)
+  }
+
 
   searchByName(pattern:string) {
     //http.get genera un observable (un locker de Eimason)

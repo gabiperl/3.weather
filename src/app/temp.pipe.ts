@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TempPipe implements PipeTransform {
 
-  transform(value: number, numDecimals: number = 0): string {
+  transform(value: number, numDecimals: number = 2): string {
     return value.toFixed(numDecimals) + " °C";
   }
 
